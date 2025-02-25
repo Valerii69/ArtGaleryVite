@@ -5,9 +5,11 @@ import './App.css'
 function App() {
 
   return (
-  
-        <ArtGallery/>
-
+    <>
+   
+      <ArtGallery />
+      <p>Галерея</p>
+</>
 
   )
 }
