@@ -1,7 +1,7 @@
 // import React, { useState, useCallback } from "react";
 import "./nav.css";
 import { Search } from "../Search/Search";
-import logo from "../../public/logo.png";
+import logo from "../public/logo.png";
 
 export const Nav = () => {
 
