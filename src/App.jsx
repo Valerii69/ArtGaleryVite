@@ -8,7 +8,7 @@ function App() {
     <>
    
       <ArtGallery />
-      <p>Галерея</p>
+      <p>Галерея!!!</p>
 </>
 
   )
