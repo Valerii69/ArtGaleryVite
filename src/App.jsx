@@ -6,7 +6,6 @@ function App() {
 
   return (
     <>
-   
       <ArtGallery />
       <p>Галерея!!!</p>
 </>
