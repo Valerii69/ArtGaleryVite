@@ -10,7 +10,7 @@ var today = new Date();
   return (
     <>
       <ArtGallery />
-      <p>Галерея {hours}:{minutes } </p>
+      <p>!!!Галерея {hours}:{minutes } </p>
       
 </>
 
