@@ -72,8 +72,7 @@ export const ArtGallery = () => {
 
   return (
     <div id="ArtGallery" className="wide-art-gallery">
-      <Nav/>
-
+      <Nav />
     </div>
   );
 };

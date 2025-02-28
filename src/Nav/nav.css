@@ -1,5 +1,10 @@
 .icons-container {
   display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 .nav-container {
@@ -13,7 +18,6 @@
 
 .logo-container {
   justify-content: space-between;
-
 }
 
 .logo-image {
@@ -29,6 +33,7 @@
   font-size: 2em;
   position: relative;
   top: calc(50% - 10px);
+  margin-left: 1vw;
   margin-right: 1vw;
   background: none;
 }
@@ -41,13 +46,21 @@
 
 .bar-icon {
   font-size: 150%;
-  margin: 1vw;
+  text-align: center;
+  /* margin: 1vw; */
+
 }
 
 .bar-icon:hover {
   transform: scale(1.2);
   text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
   transition: 0.5s ease-out;
+}
+
+.search-container:focus-within {
+  border: 1.5px solid #c74778;
+  box-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
+  transition: 0.2s ease-out;
 }
 
 .cards-counter {
