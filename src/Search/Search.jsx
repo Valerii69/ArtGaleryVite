@@ -1,5 +1,6 @@
 // import React, { useState, useEffect } from "react";
 import "./search.css";
+import SearchIcon from '../public/icons/search_12_32.svg';
 
 export const Search = () => {
   // const [search, setSearch] = useState(props.search);
@@ -41,7 +42,12 @@ export const Search = () => {
 
   return (
     <div id="searchContainer" className="search-container">
-      <i id="searchIcon" className="fa fa-search search-icon" />
+      {/* <i id="searchIcon" className="fa fa-search search-icon" /> */}
+
+      <div id="searchIcon" className="fa fa-search search-icon">
+     <img src={SearchIcon} alt="Search Icon" width="24" height="24" className="search-icon" />
+     </div>
+        
       <form >
         <input
           id="searchInput"
@@ -50,6 +56,7 @@ export const Search = () => {
           placeholder="Search"
           // value={search}
         />
+        
       </form>
 
       {/* <i

@@ -1,6 +1,8 @@
 // import React, { useState, useCallback } from "react";
 import "./nav.css";
 import { Search } from "../Search/Search";
+import House from '../public/icons/house-24.svg';
+import Envelope from "../public/icons/envelope-closed-24.svg";
 import logo from "../public/logo.png";
 
 export const Nav = () => {
@@ -18,9 +20,11 @@ export const Nav = () => {
           </a> */}
         </div>
         <div id="contactIconContainer" className="icon-container">
-          <a href="#">
-            <i id="contact" className="fa fa-envelope icon bar-icon" />
-          </a>
+           <div id="contactIconContainer" className="fa fa-search icon-container">
+            <img src={House} alt="Search Icon" width="24" height="24" className="fa fa-home icon bar-icon" />
+                  <img src={Envelope} alt="Search Icon" width="24" height="24" className="fa fa-home icon bar-icon" />
+          </div>
+          
         </div>
       </div>
     </div>

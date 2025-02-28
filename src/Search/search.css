@@ -25,6 +25,9 @@
   padding: 0.2em;
   color: #c74778;
 }
+.search-icon path {
+  stroke: #c74778;
+}
 
 .delete-icon {
   font-size: 1em;
