@@ -1,16 +1,13 @@
 
-import {ArtGallery} from "../src/ArtGallery/ArtGallery"
+import { ArtGallery } from "./ArtGallery/ArtGallery"
+import { GalleryItems } from "./ArtGallery/GalleryItems/GalleryItems";
 import './App.css'
 
 function App() {
-var today = new Date();
-  var hours = today.getUTCHours();
-  var minutes = today.getUTCMinutes();
-  
   return (
     <>
       <ArtGallery />
-      <p>!!!Галерея {hours}:{minutes } </p>
+      <GalleryItems/>
       
 </>
 
