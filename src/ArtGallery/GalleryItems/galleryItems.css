@@ -5,19 +5,23 @@ ul {
 }
 
 .gallery {
-  display: flex-wrap; /* Используем flexbox */
- max-width: 95%;
-  max-height: 100%;
-gap: 1.5em;
+  /* Используем flexbox */
+  /* display: flex-wrap;  */
+  max-width: 95%;
+  max-height: auto;
+  gap: 16px;
   flex: wrap; /* Перенос элементов */
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  align-items:center;
   justify-content: center; /* Выравнивание по центру */
-  padding: 1em;
+  /* padding: 1em; */
   list-style: none;
 }
 .gallery-item {
   flex: 1 1 calc(25% - 1.5em); /* 4 элемента в строке на больших экранах */
-  max-width: calc(25% - 1.5em);
+  /* max-width: calc(25% - 1.5em); */
   list-style-type: none;
 }
 
@@ -33,19 +37,18 @@ html {
 
 @media only screen and (min-width: 1024px) {
   .gallery {
-    column-count: 4;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
   }
 }
 
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
+@media only screen and (min-width: 768px) and(max-width: 1023px) {
   .gallery {
-    column-count: 3;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 1px) {
-  .gallery {
-    column-count: 2;
-  }
+@media only screen and (max-width: 767px) and (min-width: 1px) { .gallery {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
+}
