@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import { Modal } from "../../Modal/Modal";
+import PropTypes from "prop-types";
 import "./artCard.css";
 
+export function ArtCard({
+  artist,
+  title,
+  // price,
+  src,
+  // onCardClick,
+  width,
+  height,
+}) {
+  console.log("✅ ArtCard rendered:", title);
 
-export function ArtCard({ artist, title, price, src, onCardClick, width,height }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
 
   const openModal = (imageSrc) => {
+    console.log("🔍 openModal executed, imageSrc:", imageSrc);
     setCurrentImage(imageSrc);
     setIsModalOpen(true);
   };
 
   return (
-    <div id="cardContainer" className="card-container card-border" onClick={() => onCardClick({ artist, title, price, src })}>
+    <div id="cardContainer" className="card-container card-border">
       <img
         id="cardImage"
         loading="lazy"
@@ -22,6 +33,10 @@ export function ArtCard({ artist, title, price, src, onCardClick, width,height }
         className="card-image"
         width={width}
         height={height}
+        onClick={(e) => {
+          e.stopPropagation();
+          openModal(src);
+        }}
       />
       <div className="overlay">
         <div id="cardTitleContainer" className="items card-title-container">
@@ -32,21 +47,23 @@ export function ArtCard({ artist, title, price, src, onCardClick, width,height }
           <p id="cardDate">{artist}</p>
         </div>
       </div>
-      {/* <button
-        className=""
-        aria-label={`View ${title} in modal`}
-        onClick={(e) => {
-          e.stopPropagation();
-          openModal(src);
-        }}
-      >
-        View in Modal
-      </button> */}
+
+      {/* Модальне вікно */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {currentImage && (
+          <img
+            src={currentImage}
+            alt="Selected artwork"
+            width={700}
+            height={700}
+            // loading="lazy"
+          />
+        )}
+        <button onClick={() => setIsModalOpen(false)}>Close</button>
+      </Modal>
     </div>
   );
 }
-
-
 
 export function ArtCardItem({ currentCard, handleClickedCard }) {
   const handleClick = (e) => {
@@ -62,13 +79,14 @@ export function ArtCardItem({ currentCard, handleClickedCard }) {
 }
 
 ArtCard.propTypes = {
-  currentCard: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    artist: PropTypes.string.isRequired,
-    medium: PropTypes.string.isRequired,
-    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  }).isRequired,
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  artist: PropTypes.string.isRequired,
+  medium: PropTypes.string.isRequired,
+  price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  onCardClick: PropTypes.func.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
 };
 
 ArtCardItem.propTypes = {

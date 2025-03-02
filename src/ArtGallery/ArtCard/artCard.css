@@ -10,11 +10,10 @@
   max-width: 100%;
   display: flex;
   font-weight: 600;
-    /* display: grid; */
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-  
+  /* display: grid; */
+  /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr); */
+  gap: 8px;
 }
 
 .card-border {
@@ -28,30 +27,37 @@
   max-width: 100%;
   max-height: 100%;
   display: table-row;
-  z-index: 0;
+  position: relative; /* Запобігає випадковому перекриттю */
+  z-index: 0; /* Піднімає вище за overlay */
 }
 .overlay {
-  grid-template-columns: 1fr;
-  grid-template-rows: 50% 50%;
+  display: table-cell;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.85);
   color: #c74778;
   opacity: 0;
+
   transition: all 0.5s;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+
   bottom: 0;
   z-index: 1;
-  display: table-cell;
-  position: absolute;
+
   font-family: "Playfair Display", serif;
+  pointer-events: none; /* Щоб кліки проходили крізь */
+  /* Робимо так, щоб overlay не блокував кліки */
 }
 
 .items {
   letter-spacing: 3px;
   justify-self: center;
-  align-self: stretch center;
+  /* align-self: stretch center; */
 }
 
 .card-title-container {
@@ -73,8 +79,8 @@
 .card-title-container p {
   margin-right: 0.5vh;
   margin-left: 0.5vh;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  /* padding-top: 1vw; */
+  padding-bottom: 1vw;
 }
 
 .card-date-container {
@@ -83,7 +89,7 @@
   transform: translateY(4px);
   transition: all 0.7s;
   height: 50%;
-  padding-bottom: 2vw;
+  padding-bottom: 1vw;
 }
 
 .card-container:hover .overlay {
@@ -96,8 +102,8 @@
 }
 
 .card-container:hover .overlay hr {
-  width: 75px;
-  transition-delay: 0.4s;
+  width: 120px;
+  transition-delay: 0.5s;
 }
 
 .card-container:hover .overlay .card-date-container {

@@ -44,6 +44,7 @@
   .wide-art-gallery {
     display: flex;
     flex-direction: row;
+    width: 95%;
   }
 }
 
