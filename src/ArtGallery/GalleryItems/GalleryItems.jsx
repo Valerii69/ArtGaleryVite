@@ -1,6 +1,5 @@
-
-import { artGalleryData } from '../../data/artGalleryData';
-import { ArtCard } from '../ArtCard/ArtCard';
+import { artGalleryData } from "../../data/artGalleryData";
+import { ArtCard } from "../ArtCard/ArtCard";
 import "./galleryItems.css";
 console.log(artGalleryData);
 
@@ -12,11 +11,8 @@ export function GalleryItems() {
   return (
     <div id="galleryContainer" className="gallery-container">
       <ul className="gallery">
-        
         {artGalleryData.map((item, index) => (
-     
           <li key={index} className="gallery-item">
-            
             <ArtCard
               artist={item.artist}
               title={item.title}
@@ -26,7 +22,7 @@ export function GalleryItems() {
               onCardClick={handleCardSelect}
               width={item.width}
               height={item.height}
-
+              date={item.date}
             />
           </li>
         ))}
@@ -34,4 +30,3 @@ export function GalleryItems() {
     </div>
   );
 }
-

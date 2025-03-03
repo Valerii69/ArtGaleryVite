@@ -3,15 +3,7 @@ import { Modal } from "../../Modal/Modal";
 import PropTypes from "prop-types";
 import "./artCard.css";
 
-export function ArtCard({
-  artist,
-  title,
-  // price,
-  src,
-  // onCardClick,
-  width,
-  height,
-}) {
+export function ArtCard({ artist, title, price, src, date, width, height }) {
   console.log("✅ ArtCard rendered:", title);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,32 +41,26 @@ export function ArtCard({
       </div>
 
       {/* Модальне вікно */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal
+        title={title}
+        artist={artist}
+        date={date}
+        price={price}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
         {currentImage && (
           <img
             src={currentImage}
             alt="Selected artwork"
-            width={700}
-            height={700}
-            // loading="lazy"
+            width={width}
+            height={height}
+            loading="lazy"
           />
         )}
-        <button onClick={() => setIsModalOpen(false)}>Close</button>
+ 
       </Modal>
     </div>
-  );
-}
-
-export function ArtCardItem({ currentCard, handleClickedCard }) {
-  const handleClick = (e) => {
-    e.preventDefault();
-    handleClickedCard(currentCard);
-  };
-
-  return (
-    <li onClick={handleClick}>
-      <ArtCard currentCard={currentCard} />
-    </li>
   );
 }
 
@@ -87,9 +73,5 @@ ArtCard.propTypes = {
   onCardClick: PropTypes.func.isRequired,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
-};
-
-ArtCardItem.propTypes = {
-  currentCard: PropTypes.object.isRequired,
-  handleClickedCard: PropTypes.func.isRequired,
+  date: PropTypes.string.isRequired,
 };
