@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./artCard.css";
 
 export function ArtCard({ artist, title, price, src, date, width, height }) {
-  console.log("✅ ArtCard rendered:", title);
+  // console.log("✅ ArtCard rendered:", title);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);

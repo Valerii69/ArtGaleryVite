@@ -23,9 +23,11 @@
 }
 
 .search-icon {
+  display: flex;
   font-size: 1em;
   padding: 0.2em;
   color: #c74778;
+  align-items: center
 }
 
 

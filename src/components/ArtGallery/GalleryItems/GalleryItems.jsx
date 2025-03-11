@@ -2,7 +2,7 @@ import { artGalleryData } from "../../../data/artGalleryData";
 import { ArtCard } from "../ArtCard/ArtCard";
 import "./galleryItems.css";
 
-console.log(artGalleryData);
+// console.log(artGalleryData);
 
 export function GalleryItems() {
   const handleCardSelect = (selectedCard) => {

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"; 
-import "./nav.css";
 import { Search } from "../Search/Search";
-// import BrushContainer from "../BrushContainer/BrushContainer"
+
 import House from "../../public/icons/house-24.svg";
 import Envelope from "../../public/icons/envelope-closed-24.svg";
 import logo from "../../public/logo.png";
 import Phone from "../../public/icons/phone-42-32.svg"
 
+import "./nav.css";
 export const Nav = () => {
   return (
     <div id="navContainer" className="nav-container">
@@ -42,7 +42,6 @@ export const Nav = () => {
             className="icon bar-icon"
           />
         </a>
-       
         </div>
     </div>
   );
