@@ -1,10 +1,11 @@
-// import React, { useState, useCallback } from "react";
+import { Link } from "react-router-dom"; 
 import "./nav.css";
 import { Search } from "../Search/Search";
-import House from "../public/icons/house-24.svg";
-import Envelope from "../public/icons/envelope-closed-24.svg";
-import logo from "../public/logo.png";
-import Phone from "../public/icons/phone-42-32.svg"
+// import BrushContainer from "../BrushContainer/BrushContainer"
+import House from "../../public/icons/house-24.svg";
+import Envelope from "../../public/icons/envelope-closed-24.svg";
+import logo from "../../public/logo.png";
+import Phone from "../../public/icons/phone-42-32.svg"
 
 export const Nav = () => {
   return (
@@ -13,7 +14,7 @@ export const Nav = () => {
         <img id="logoImage" className="logo-image" alt="logo" src={logo} />
       </div>
       <Search />
-      <div id="iconsContainer" className="icons-container">
+      <div className="icons-container">
       <a href="tel:+381234567890">
           <img
             src={Phone}
@@ -23,7 +24,7 @@ export const Nav = () => {
             className="icon bar-icon"
           />
         </a>
-        <a href="#">
+        <Link to="/about">
           <img
             src={House}
             alt="House Icon"
@@ -31,7 +32,7 @@ export const Nav = () => {
             height="32"
             className="icon bar-icon"
           />
-        </a>
+        </Link>
         <a href="mailto:2455521@gmail.com">
           <img
             src={Envelope}
@@ -42,7 +43,7 @@ export const Nav = () => {
           />
         </a>
        
-      </div>
+        </div>
     </div>
   );
 };

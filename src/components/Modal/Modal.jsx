@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import Mark from "../public/icons/x-mark-3-32.svg";
+// import Mark from "../public/icons/x-mark-3-32.svg";
+import Mark from "../../public/icons/x-mark-3-32.svg";
 import "./modal.css";
 
 export function Modal({

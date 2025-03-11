@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from "react";
 import "./search.css";
-import SearchIcon from "../public/icons/search_12_32.svg";
+import SearchIcon from "../../public/icons/search_12_32.svg";
 
 export const Search = () => {
   // const [search, setSearch] = useState(props.search);

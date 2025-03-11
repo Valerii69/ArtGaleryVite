@@ -1,17 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ArtGallery from "./components/ArtGallery";
+import BrushContainer from "./components/BrushContainer";
+import "./App.css";
 
-import { ArtGallery } from "./ArtGallery/ArtGallery"
-import { GalleryItems } from "./ArtGallery/GalleryItems/GalleryItems";
-import './App.css'
-
-function App() {
+export default function App() {
   return (
-    <>
-      <ArtGallery />
-      <GalleryItems/>
-      
-</>
-
-  )
+    <Router basename="/ArtGaleryVite">
+      <Routes>
+        <Route path="/" element={<ArtGallery />} />
+        <Route path="/about" element={<BrushContainer />} />
+        <Route path="/contact" element={<div>Contact Page</div>} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
