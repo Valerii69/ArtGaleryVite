@@ -23,16 +23,19 @@
 
 .restart-anim-cont {
   background-color: rgba(255, 255, 255, 0.4);
+   position: absolute;
+    top: 0;
+  right: 0;
+  
   border-radius: 50px;
   text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex;
-  top: 0;
-  right: 0;
+ 
   margin: 0.5em;
-  position: absolute;
+
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
   text-decoration: none;

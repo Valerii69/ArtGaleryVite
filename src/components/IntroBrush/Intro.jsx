@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useState, } from "react";
+import PropTypes from "prop-types";
+import { Title } from "../BrushContainer/Title/Title";
 
 import "./intro.css";
 
 import { Flower } from "../Flower/Flower";
-import { Title } from "../Title/Title";
+// import { Title } from "../Title/Title";
 
-export const Intro = (props) => {
+export function Intro (props) {
   const [displayRestart, setDisplayRestart] = useState(false);
 
-  console.log(props.animationPlayed);
+  // console.log(props.animationPlayed);
   return (
+    <>
     <div className="intro-cont">
-      {props.animationPlayed && (
+    
         <button
           className="restart-anim-cont"
           onClick={() => {
@@ -19,19 +22,20 @@ export const Intro = (props) => {
             setDisplayRestart(!displayRestart);
           }}
         >
-          <i className="fas fa-redo restart-anim-icon"></i>
+          <i className="restart-anim-icon"></i>
         </button>
-      )}
-
+      
+ </div>
       <Flower
         setAnimationPlayed={props.setAnimationPlayed}
         animationPlayed={props.animationPlayed}
         displayRestart={displayRestart}
       />
-      <Title
-        setAnimationPlayed={props.setAnimationPlayed}
-        animationPlayed={props.animationPlayed}
-      />
-    </div>
+      {/* <Title /> */}
+     
+    </>
+
+
   );
 };
+

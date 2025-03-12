@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import Typed from "typed.js";
-import { Intro } from "../components/IntroBrush/Intro";
-import { Title } from "./BrushContainer/Title/Title";
-import "../components/BrushContainer/brushContainer.css";
-import "../components/IntroBrush/intro.css";
-import "../components/Flower/flower.css";
+import { Intro } from "../../IntroBrush/Intro";
+// import "../components/BrushContainer/brushContainer.css";
+import "../../../components/IntroBrush/intro.css";
+// import "../components/Flower/flower.css";
+import "./title.css";
 
-export default function BrushContainer() {
+export  function Title() {
  const [animationPlayed, setAnimationPlayed] = useState(false);
 
 
@@ -30,9 +30,9 @@ export default function BrushContainer() {
   }, []);
 
   return (
-    <div className="card">
+    <div className="">
 
-      <div className="content-container">
+      <div className="">
         <Intro
           animationPlayed={animationPlayed}
           setAnimationPlayed={setAnimationPlayed}
@@ -45,9 +45,3 @@ export default function BrushContainer() {
     </div>
   );
 }
-
-// export default function BrushContainer() {
-//   return (
-
-//   );
-// }

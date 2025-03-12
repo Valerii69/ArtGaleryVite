@@ -1,3 +1,4 @@
+/* card */
 .card {
   background-color: #fff;
   border-radius: 20px;
@@ -10,22 +11,23 @@
   justify-content:  space-between;
   align-items: stretch;
   overflow: hidden;
-  /* position: absolute; */
+  position: relative;
 }
 @media only screen and (max-width: 500px) {
   .card {
     /* height: 90vh; */
   }
 }
-
 .content-container {
   height: 70vh;
+  
   display: flex;
-   flex-direction: row;
-  /* flex-direction: column; */
+   /* flex-direction: row; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 20;
+  /* position: relative; */
 }
 
 @media only screen and (max-width: 500px) {
@@ -34,6 +36,9 @@
   }
 }
 
+
+
+/*  */
 .brush-container {
   width: 100%;
   height: 100%;
