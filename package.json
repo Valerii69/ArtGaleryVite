@@ -13,12 +13,14 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "animejs": "^3.2.2",
     "eslint-config-prettier": "^10.0.1",
     "eslint-js": "github:eslint/js",
     "prettier": "^3.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
+    "typed.js": "^2.1.0",
     "vite-plugin-svgr": "^4.3.0"
   },
   "devDependencies": {
