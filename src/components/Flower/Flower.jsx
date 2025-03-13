@@ -1,5 +1,5 @@
 import  { useEffect } from "react";
-
+// import { Title } from "../BrushContainer/Title/Title";
 import "./flower.css";
 
 import anime from "animejs";

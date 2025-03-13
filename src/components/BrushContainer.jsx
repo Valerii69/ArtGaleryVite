@@ -2,13 +2,15 @@ import React from "react";
 import { useState } from "react";
 import Typed from "typed.js";
 import { Intro } from "../components/IntroBrush/Intro";
-import { Title } from "./BrushContainer/Title/Title";
+import Angel from "../public/icons/AngleDuble.svg";
+
 import "../components/BrushContainer/brushContainer.css";
 import "../components/IntroBrush/intro.css";
 import "../components/Flower/flower.css";
 
 export default function BrushContainer() {
- const [animationPlayed, setAnimationPlayed] = useState(false);
+  const [animationPlayed, setAnimationPlayed] = useState(false);
+    const [displayRestart, setDisplayRestart] = useState(false);
 
 
   // Create reference to store the DOM element containing the animation
@@ -29,25 +31,37 @@ export default function BrushContainer() {
     };
   }, []);
 
-  return (
-    <div className="card">
+   return (
+     <div className="card">
+       <button
+         className="restart-anim-cont"
+         onClick={() => {
+           setAnimationPlayed(false);
+           setDisplayRestart(!displayRestart);
+         }}
+       >
+         <img
+           src={Angel}
+           alt="Angel Icon"
+           width="24"
+           height="24"
+           className="icon bar-icon"
+         />
+         <i className="restart-anim-icon"></i>
+       </button>
+       <div className="content-container">
+         <div className="flower-text-wrapper">
+           <Intro
+             animationPlayed={animationPlayed}
+             setAnimationPlayed={setAnimationPlayed}
+             displayRestart={displayRestart}
+           />
 
-      <div className="content-container">
-        <Intro
-          animationPlayed={animationPlayed}
-          setAnimationPlayed={setAnimationPlayed}
-        />
-  
-        <div className="intro-cont">
-          <span ref={el} />
-        </div>
-      </div>
-    </div>
-  );
+           <div className="text-container">
+             <span className="text-wrapper" ref={el} />
+           </div>
+         </div>
+       </div>
+     </div>
+   );
 }
-
-// export default function BrushContainer() {
-//   return (
-
-//   );
-// }

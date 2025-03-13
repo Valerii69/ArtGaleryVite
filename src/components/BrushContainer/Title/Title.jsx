@@ -7,7 +7,7 @@ import "../../../components/IntroBrush/intro.css";
 // import "../components/Flower/flower.css";
 import "./title.css";
 
-export  function Title() {
+export function Title() {
  const [animationPlayed, setAnimationPlayed] = useState(false);
 
 
@@ -38,7 +38,7 @@ export  function Title() {
           setAnimationPlayed={setAnimationPlayed}
         />
   
-        <div className="intro-cont">
+        <div className="">
           <span ref={el} />
         </div>
       </div>
