@@ -1,15 +1,16 @@
 /* icon svg */
-.icon {
+
+/* .icon {
   color: #c74778;
   /* min-width: 30px; */
-  text-align: center;
+  /* text-align: center;
   font-size: 2em;
   position: absolute;
-  top: calc(50% - 10px);
+  top: calc(50% - 10px); */
   /* margin-left: 1vw;
   margin-right: 1vw; */
-  background: none;
-}
+  /* background: none; */
+
 
 /* .icons-container {
   height: 100%;
@@ -29,6 +30,7 @@
   text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
   transition: 0.5s ease-out;
 }
+
 /* card */
 .card {
   background-color: #fff;
@@ -44,6 +46,7 @@
   overflow: hidden;
   position: relative;
 }
+
 @media only screen and (max-width: 500px) {
   .card {
     /* height: 90vh; */
@@ -106,15 +109,17 @@
 
 .text-container {
   display: flex;
-  font-size: 24px;
+  font-size: 40px;
   width: 50%;
   justify-content: left;
   max-width: 400px; /* Адаптуйте під ваш макет */
 }
+
 .text-wrapper {
   display: flex;
   align-items: center; /* Вирівнює квітку і текст по центру */
   justify-content: center;
+  color: #c74778;
 }
 @media only screen and (max-width: 500px) {
   #first,

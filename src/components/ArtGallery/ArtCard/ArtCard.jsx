@@ -3,14 +3,12 @@ import { Modal } from "../../Modal/Modal";
 import PropTypes from "prop-types";
 import "./artCard.css";
 
-export function ArtCard({ artist, title, price, src, date, width, height }) {
-  // console.log("✅ ArtCard rendered:", title);
-
+export function ArtCard(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
 
   const openModal = (imageSrc) => {
-    console.log("🔍 openModal executed, imageSrc:", imageSrc);
+    // console.log("🔍 openModal executed, imageSrc:", imageSrc);
     setCurrentImage(imageSrc);
     setIsModalOpen(true);
   };
@@ -20,32 +18,32 @@ export function ArtCard({ artist, title, price, src, date, width, height }) {
       <img
         id="cardImage"
         loading="lazy"
-        src={src}
-        alt={`Artwork ${title} by ${artist}`}
+        src={props.src}
+        alt={`Artwork ${props.title} by ${props.artist}`}
         className="card-image"
-        width={width}
-        height={height}
+        width={props.width}
+        height={props.height}
         onClick={(e) => {
           e.stopPropagation();
-          openModal(src);
+          openModal(props.src);
         }}
       />
       <div className="overlay">
         <div id="cardTitleContainer" className="items card-title-container">
-          <p id="cardTitle">{title}</p>
+          <p id="cardTitle">{props.title}</p>
           <hr />
         </div>
         <div id="cardDateContainer" className="items card-date-container">
-          <p id="cardDate">{artist}</p>
+          <p id="cardDate">{props.artist}</p>
         </div>
       </div>
 
       {/* Модальне вікно */}
       <Modal
-        title={title}
-        artist={artist}
-        date={date}
-        price={price}
+        title={props.title}
+        artist={props.artist}
+        date={props.date}
+        price={props.price}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       >
@@ -53,12 +51,11 @@ export function ArtCard({ artist, title, price, src, date, width, height }) {
           <img
             src={currentImage}
             alt="Selected artwork"
-            width={width}
-            height={height}
+            width={props.width}
+            height={props.height}
             loading="lazy"
           />
         )}
- 
       </Modal>
     </div>
   );

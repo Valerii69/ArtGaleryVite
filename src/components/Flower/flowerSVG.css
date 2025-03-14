@@ -1,7 +1,9 @@
 .flower-cont svg {
   fill: none;
-  width: 450px;
-  height: 450px;
+  /* width: 300px; */
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
   stroke: white;
 }
 .flower-cont path {

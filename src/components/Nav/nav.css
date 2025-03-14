@@ -1,64 +1,53 @@
 .icons-container {
   display: flex;
   height: 100%;
+  width: 9vw;
   justify-content: space-between;
-  gap: 1.5vw;
+  position: relative;
   align-items: center;
-  margin-left: 1vw; 
-   margin-right: 1vw;
+  margin: 0 1vw;
 }
 
 .nav-container {
   display: flex;
-  flex-direction: row;
   width: 100%;
   align-items: center;
-  flex-direction: row;
   justify-content: center;
 }
 
 .logo-container {
+  display: flex;
   justify-content: space-between;
 }
 
 .logo-image {
   height: 2em;
-  /* border-radius: 20px; */
-  margin-right: 1vw;
+  margin-right: 1rem;
+  transition: transform 0.5s ease-out;
+}
+.logo-image:hover {
+  text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
+  transform: scale(1.2); /* Легке збільшення при наведенні */
 }
 
 .icon {
-  color: #c74778;
-  /* min-width: 30px; */
   text-align: center;
   font-size: 2em;
-  position: relative;
-  top: calc(50% - 10px);
-  /* margin-left: 1vw;
-  margin-right: 1vw; */
-  background: none;
+  background: inherit;
 }
 
-/* .icons-container {
-  height: 100%;
-  top: 0;
-  display: flex;
-  row-gap:10px;
-} */
-
-.bar-icon {
-  font-size: 150%;
-  text-align: center;
-  /* margin: 1vw; */
-
-}
-
-.bar-icon:hover {
+.icon:hover {
   transform: scale(1.2);
   text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
   transition: 0.5s ease-out;
 }
-.search-container{
+
+.bar-icon {
+  margin: 0.5rem;
+}
+
+.search-container {
+  display: flex;
   align-items: center;
 }
 

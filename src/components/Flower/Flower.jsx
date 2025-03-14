@@ -1,5 +1,6 @@
-import  { useEffect } from "react";
-// import { Title } from "../BrushContainer/Title/Title";
+import { useEffect } from "react";
+import PropTypes from "prop-types";
+
 import "./flower.css";
 
 import anime from "animejs";
@@ -43,6 +44,12 @@ export const Flower = (props) => {
       <FlowerSVG displayRestart={props.displayRestart} />
     </div>
   );
+};
+
+Flower.propTypes = {
+  setAnimationPlayed: PropTypes.func.isRequired,
+  animationPlayed: PropTypes.bool.isRequired,
+  displayRestart: PropTypes.bool.isRequired,
 };
 
 const colors = [

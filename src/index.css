@@ -5,8 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* background-color: #242424; */
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -30,6 +30,10 @@ body {
   place-items: center;
   min-width: 320px;
   font-family: "Caveat", cursive;
+  background-image: url("../src/public/Images/background.png");
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   /* min-height: 100vh; */
 }
 

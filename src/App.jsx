@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ArtGallery from "./components/ArtGallery";
 import BrushContainer from "./components/BrushContainer";
+import About from "./components/About";
 import "./App.css";
 
 export default function App() {
@@ -8,8 +9,8 @@ export default function App() {
     <Router basename="/ArtGaleryVite">
       <Routes>
         <Route path="/" element={<ArtGallery />} />
-        <Route path="/about" element={<BrushContainer />} />
-        <Route path="/contact" element={<div>Contact Page</div>} />
+        <Route path="/brush" element={<BrushContainer />} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </Router>
   );

@@ -3,15 +3,17 @@ import { Search } from "../Search/Search";
 
 import House from "../../public/icons/house-24.svg";
 import Envelope from "../../public/icons/envelope-closed-24.svg";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo2.png";
 import Phone from "../../public/icons/phone-42-32.svg"
 
 import "./nav.css";
+
 export const Nav = () => {
   return (
     <div id="navContainer" className="nav-container">
       <div id="logoContainer" className="logo-container">
-        <img id="logoImage" className="logo-image" alt="logo" src={logo} />
+      <Link to="/about">
+        <img id="logoImage"  width="32" height="32" className=" logo-image" alt="logo" src={logo} /></Link>
       </div>
       <Search />
       <div className="icons-container">
@@ -24,7 +26,7 @@ export const Nav = () => {
             className="icon bar-icon"
           />
         </a>
-        <Link to="/about">
+        <Link to="/brush">
           <img
             src={House}
             alt="House Icon"
