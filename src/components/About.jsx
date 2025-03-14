@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <div id="ArtGallery" className="wide-art-gallery">
-        {/* <Nav /> */}Щось типа того
+        {/* <Nav /> */}Треба щось придумати
       </div>
       {/* <GalleryItems /> */}
     </>
