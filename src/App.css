@@ -1,8 +1,8 @@
 #root {
   max-width: 1440px;
-  margin: 10vh auto;
+  margin: 1vh auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
   /* position: relative; */
 }
 

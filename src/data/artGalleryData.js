@@ -6,6 +6,14 @@ import Twist from "../public/Images/Twist.png";
 import Cubist from "../public/Images/Cubist.png";
 import Dub from "../public/Images/Dub.jpeg";
 import Hart from "../public/Images/Hart.png";
+import Spayder from "../public/Images/Spayder.png";
+import Red from "../public/Images/Red.png";
+import Patricks from "../public/Images/Patricks.png";
+import None from "../public/Images/None.jpeg";
+import Mona from "../public/Images/Mona.png";
+import Labyrinth from "../public/Images/Labyrinth.png";
+
+
 
 export const artGalleryData = [
   {
@@ -92,6 +100,73 @@ export const artGalleryData = [
     size: "Color lithography (40x60)",
     price: "20 000",
     src: Hart,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: Spayder,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: Red,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: Patricks,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: None,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: Labyrinth,
+    width: "100%",
+    height: "100%",
+    date: "19.12.24",
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+  },
+  {
+    artist: "Francois Dupont",
+    title: "Procedures",
+    size: "Color lithography (40x60)",
+    price: "20 000",
+    src: Mona,
     width: "100%",
     height: "100%",
     date: "19.12.24",

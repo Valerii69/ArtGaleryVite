@@ -7,14 +7,14 @@
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
   
-  font-synthesis: none;
+  /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
+  font-weight: 700;
   color: #c74778;
   text-decoration: inherit;
 }
@@ -23,17 +23,17 @@ a:hover {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   font-family: "Caveat", cursive;
   background-image: url("../src/public/Images/background.png");
-  background-size: cover; /* Ensures the image covers the entire screen */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
   /* min-height: 100vh; */
 }
 

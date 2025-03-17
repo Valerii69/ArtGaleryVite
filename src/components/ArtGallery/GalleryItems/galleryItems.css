@@ -21,8 +21,8 @@ ul {
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Заповнення без спотворення */
-  border-radius: 8px; /* Закруглення кутів */
+  object-fit: cover; 
+  border-radius: 8px; 
 }
 
 @media only screen and (max-width: 1023px) {
@@ -35,4 +35,48 @@ ul {
   .gallery {
     grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 в ряд на мобільних */
   }
+}
+
+/* пагинація */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 50% ;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #c74778;
+  border-radius: 5px;
+  color: #333;
+  background-color: #fff;
+   font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #c5809b;
+  color: #fff;
+}
+
+.pagination .active a {
+  background-color: #c74778;
+  color: #fff;
+  border-color: #c74778;
+}
+
+.pagination .disabled a {
+  opacity: 0.5;
+  pointer-events: none;
 }

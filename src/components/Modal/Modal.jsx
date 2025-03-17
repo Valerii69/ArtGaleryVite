@@ -24,9 +24,9 @@ export function Modal({
             <img
               src={Mark}
               alt="Mark Icon"
-              width="32"
-              height="32"
-              className=" bar-icon"
+              width="24"
+              height="24"
+              className="bar-icon"
             />
           </button>
           <div className="image-container">
