@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
-import Typed from "typed.js";
+// import Typed from "typed.js";
 // import { Intro } from "../components/IntroBrush/Intro";
 import Angel from "../public/icons/AngleDuble.svg";
 // import Logo from "../public/logo2.png";
