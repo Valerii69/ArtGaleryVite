@@ -9,7 +9,7 @@ ul {
   grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Максимум 4 зображення в ряд */
   grid-auto-rows: min-content;
   gap: 8px;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   grid-auto-flow: dense; /* Щільне розташування */
 }
@@ -21,19 +21,26 @@ ul {
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  border-radius: 8px; 
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 1023px) {
   .gallery {
+    min-width: var(--desktop);
     grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 в ряд на середніх екранах */
   }
 }
 
 @media only screen and (max-width: 767px) {
   .gallery {
-    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 в ряд на мобільних */
+    min-width: var(--mobil);
+    grid-template-columns: repeat(1, minmax(100px, 1fr)); /* 2 в ряд на мобільних */
+  }
+}
+@media only screen and (max-width: 375px) {
+  .gallery {
+    grid-template-columns: repeat(1, minmax(50px, 0.8fr)); /* 1 в ряд на мобільних */
   }
 }
 
@@ -45,7 +52,7 @@ ul {
   padding: 10px 0;
   position: absolute;
   bottom: 0;
-  left: 50% ;
+  left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
 }
@@ -61,8 +68,10 @@ ul {
   border-radius: 5px;
   color: #333;
   background-color: #fff;
-   font-weight: 700;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 700;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .pagination a:hover {
