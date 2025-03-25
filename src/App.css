@@ -1,7 +1,7 @@
 #root {
-  --tablet: calc(100% / 2 - 2 * 15px);
+  /* --tablet: calc(100% / 2 - 2 * 15px);
   --desktop: calc(100% / 4 - 2 * 15px);
-  --mobil:calc(100% / 1 - 2 * 10px);
+  --mobil:calc(100% / 1 - 2 * 10px); */
 
   max-width: 1440px;
   margin: auto auto;

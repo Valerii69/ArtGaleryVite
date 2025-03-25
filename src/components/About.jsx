@@ -11,12 +11,12 @@ import "../components/Flower/flower.css";
 import "../../src/components/ArtGallery/art-gallery.css";
 
 export default function About() {
-  const [imgSize, setImgSize] = useState(240); // Початковий розмір
+  const [imgSize, setImgSize] = useState(150); // Початковий розмір
 
   useEffect(() => {
     function getImgSize() {
       if (window.innerWidth < 480) return 140;
-      if (window.innerWidth < 768) return 150;
+      if (window.innerWidth < 1024) return 150;
       else return 240;
     }
 
@@ -45,23 +45,12 @@ export default function About() {
           </button>
         </Link>
 
-        {/* <button
-        className="restart-anim-cont"
-        onClick={() => {
-          setAnimationPlayed(false);
-          setDisplayRestart(!displayRestart);
-        }}
-      >
-        <img
-       
-          src={Logo}
-          alt="Angel Icon"
-          width="24"
-          height="24"
-          className="bar-icon"
-        />
-        <i className="restart-anim-icon"></i>
-      </button> */}
+        <div className="aboutContainer-text">
+          <p >
+        {"The artist's studio is the place where art is born. It is therefore one of the artist's most personal and private spaces. The studio helps the artist to create. An artist's studio can be anywhere - in the kitchen, on the beach, on the roof of a building... The choice is yours!"}
+          </p>
+        </div>
+
         <div className="content-container">
           <img
             id="brushImg"
