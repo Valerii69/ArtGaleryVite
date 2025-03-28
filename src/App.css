@@ -4,7 +4,7 @@
   --mobil:calc(100% / 1 - 2 * 10px); */
 
   max-width: 1440px;
-  margin: auto auto;
+  margin: 10px auto;
   padding: 2rem;
   /* text-align: center; */
   position: relative;

@@ -13,4 +13,3 @@ export function AboutCard() {
     </div>
   );
 }
-console.log([]+{} === {}+[]);

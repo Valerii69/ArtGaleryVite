@@ -6,7 +6,7 @@ ul {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Максимум 4 зображення в ряд */
+  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Максимум 4 зображення в ряд */
   grid-auto-rows: min-content;
   gap: 8px;
   /* align-items: center; */
@@ -27,14 +27,12 @@ ul {
 
 @media only screen and (max-width: 1023px) {
   .gallery {
-    min-width: var(--desktop);
     grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 в ряд на середніх екранах */
   }
 }
 
 @media only screen and (max-width: 767px) {
   .gallery {
-    min-width: var(--mobil);
     grid-template-columns: repeat(1, minmax(100px, 1fr)); /* 2 в ряд на мобільних */
   }
 }
@@ -50,7 +48,7 @@ ul {
   justify-content: center;
   list-style: none;
   padding: 10px 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

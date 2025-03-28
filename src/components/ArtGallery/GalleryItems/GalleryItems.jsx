@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ContactButton } from "../ContactButton/ContactButton";
 import ReactPaginate from "react-paginate";
 import { artGalleryData } from "../../../data/artGalleryData";
 import { ArtCard } from "../ArtCard/ArtCard";
@@ -23,36 +24,39 @@ export function GalleryItems() {
   };
 
   return (
-    <div id="galleryContainer" className="gallery-container">
-      <ul className="gallery">
-        {currentItems.map((item, index) => (
-          <li key={index} className="gallery-item">
-            <ArtCard
-              artist={item.artist}
-              title={item.title}
-              size={item.size}
-              price={item.price}
-              src={item.src}
-              onCardClick={handleCardSelect}
-              width={item.width}
-              height={item.height}
-              date={item.date}
-            />
-          </li>
-        ))}
-      </ul>
+    <>
+      <div id="galleryContainer" className="gallery-container">
+        <ul className="gallery">
+          {currentItems.map((item, index) => (
+            <li key={index} className="gallery-item">
+              <ArtCard
+                artist={item.artist}
+                title={item.title}
+                size={item.size}
+                price={item.price}
+                src={item.src}
+                onCardClick={handleCardSelect}
+                width={item.width}
+                height={item.height}
+                date={item.date}
+              />
+            </li>
+          ))}
+        </ul>
 
-      <ReactPaginate
-        previousLabel={"<"}
-        nextLabel={">"}
-        breakLabel={"..."}
-        pageCount={pageCount}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={3}
-        onPageChange={handlePageChange}
-        containerClassName={"pagination"}
-        activeClassName={"active"}
-      />
-    </div>
+        <ReactPaginate
+          previousLabel={"<"}
+          nextLabel={">"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageChange}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+        />
+      </div>
+      <ContactButton />
+    </>
   );
 }
