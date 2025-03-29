@@ -1,11 +1,12 @@
 .buttonSticky {
-    display: flex;
+     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-    position: absolute;
-    bottom: 3rem;
+    position: fixed;
+    bottom: 5rem;
     right: 1.5rem;
     z-index: 90;
+    gap: 1rem;
+    align-items: center
 }
 .contactWidgetButtons {
     position: absolute;
@@ -76,3 +77,38 @@ a, button {
     object-fit: contain;
     filter: invert(1);
 }
+
+.returnScroll{
+    /* background-color: rgba(255, 255, 255, 0.4); */
+     /* position: absolute;
+      top: 0;
+    left: 0; */
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+
+    margin: 0.5em;
+  
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    color: #c64675;
+    z-index: 900;
+    width: 48px;
+    height: 48px;
+    border: 1.25px solid #c74778;
+    font-size: 1em;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+  }
+  .return-icon {
+    rotate:  z 90deg;
+  }

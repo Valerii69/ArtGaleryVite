@@ -4,6 +4,7 @@ import IconChat from "../../../public/icons/icon-chat.svg";
 import Telegram from "../../../public/Images/telegram.png";
 import Viber from "../../../public/Images/viber.png";
 import Whatsapp from "../../../public/Images/whatsapp.png";
+import Angel from "../../../public/icons/AngleDuble.svg";
 import "./contactButton.css";
 
 export function ContactButton() {
@@ -60,6 +61,20 @@ export function ContactButton() {
           />
         </a>
       </div>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="returnScroll"
+      >
+        <img
+          src={Angel}
+          alt="Angel Icon"
+          width="24"
+          height="24"
+          className="return-icon"
+        />
+        <i className="return-anim-icon"></i>
+      </button>
     </div>
   );
 }

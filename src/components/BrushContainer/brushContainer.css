@@ -76,8 +76,10 @@
 
 /*  */
 .brush-container {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  width: 75vw;
+  height: 55vh;
   /* overflow: hidden; */
   position: absolute;
   z-index: 10;
