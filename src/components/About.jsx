@@ -1,6 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AboutCard } from "../components/AboutCard/AboutCard";
+import Typed from "typed.js";
 import Angel from "../public/icons/AngleDuble.svg";
 import alla from "../public/Images/алла3.png";
 
@@ -17,6 +19,21 @@ export default function About() {
   };
 
   const [imgSize, setImgSize] = useState(getImgSize);
+
+  const el = React.useRef(null);
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "The artist's studio is <br>the place where art is born. <br>It is therefore one of the artist's most personal and private spaces. <br>The studio helps the artist to create. <br>An artist's studio can be anywhere - in the kitchen, on the beach, on the roof of a building... <br>The choice is yours!",
+      ],
+      typeSpeed: 70,
+      showCursor: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     const updateSize = () => setImgSize(getImgSize());
@@ -55,11 +72,7 @@ export default function About() {
         </Link>
 
         <div className="aboutContainer-text">
-          <p>
-            {
-              "The artist's studio is the place where art is born. It is therefore one of the artist's most personal and private spaces. The studio helps the artist to create. An artist's studio can be anywhere - in the kitchen, on the beach, on the roof of a building... The choice is yours!"
-            }
-          </p>
+          <span className="text-wrapper" ref={el}></span>
         </div>
 
         <div className="content-container">

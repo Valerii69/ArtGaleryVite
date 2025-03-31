@@ -3,9 +3,9 @@
   --desktop: calc(100% / 4 - 2 * 15px);
   --mobil:calc(100% / 1 - 2 * 10px); */
 
-  max-width: 1440px;
-  margin: 10px auto;
-  padding: 2rem;
+  /* max-width: 1440px; */
+  margin: 15px ;
+  padding: 2rem 0;
   /* text-align: center; */
   position: relative;
 }

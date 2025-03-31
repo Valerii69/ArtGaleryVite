@@ -36,7 +36,7 @@ export default function BrushContainer() {
       <Link to="/">
         <button className="return-anim-cont">
           <img
-              src={Angel}
+            src={Angel}
             alt="Angel Icon"
             width="24"
             height="24"

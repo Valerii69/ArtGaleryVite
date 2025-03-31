@@ -6,7 +6,7 @@ import { ArtCard } from "../ArtCard/ArtCard";
 import "./galleryItems.css";
 
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 12; //кіл-сть рядків
 
 export function GalleryItems() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -45,8 +45,8 @@ export function GalleryItems() {
         </ul>
 
         <ReactPaginate
-          previousLabel={"<"}
-          nextLabel={">"}
+          previousLabel={"<<"}
+          nextLabel={">>"}
           breakLabel={"..."}
           pageCount={pageCount}
           marginPagesDisplayed={2}

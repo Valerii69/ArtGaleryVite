@@ -5,17 +5,14 @@ ul {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Максимум 4 зображення в ряд */
-  grid-auto-rows: min-content;
-  gap: 8px;
-  /* align-items: center; */
-  justify-content: center;
-  grid-auto-flow: dense; /* Щільне розташування */
+  column-count: 4; /* 4 колонки */
+  column-gap: 15px; /* Проміжок між колонками */
 }
 
 .gallery-item {
-  list-style-type: none;
+  display: inline-block; /* Дозволяє елементам не ламати потік колонок */
+  width: 100%;
+  margin-bottom: 15px; /* Відступ між елементами */
 }
 
 .gallery-item img {
@@ -27,18 +24,19 @@ ul {
 
 @media only screen and (max-width: 1023px) {
   .gallery {
-    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 в ряд на середніх екранах */
+    column-count: 3; /* 3 колонки для середніх екранів */
   }
 }
 
 @media only screen and (max-width: 767px) {
   .gallery {
-    grid-template-columns: repeat(1, minmax(100px, 1fr)); /* 2 в ряд на мобільних */
+    column-count: 2; /* 2 колонки на мобільних */
   }
 }
+
 @media only screen and (max-width: 375px) {
   .gallery {
-    grid-template-columns: repeat(1, minmax(50px, 0.8fr)); /* 1 в ряд на мобільних */
+    column-count: 1; /* 1 колонка для дуже малих екранів */
   }
 }
 

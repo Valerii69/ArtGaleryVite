@@ -40,6 +40,7 @@
     transform: scale(1.02) translateY(10px);;
     text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.3);
   }
+  
 
   .wide-art-gallery {
     display: flex;

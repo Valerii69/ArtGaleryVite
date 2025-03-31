@@ -73,7 +73,7 @@ export function ContactButton() {
           height="24"
           className="return-icon"
         />
-        <i className="return-anim-icon"></i>
+        {/* <i className="return-anim-icon"></i> */}
       </button>
     </div>
   );
