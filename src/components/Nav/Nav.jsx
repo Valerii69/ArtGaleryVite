@@ -1,23 +1,33 @@
-import { Link } from "react-router-dom"; 
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { Search } from "../Search/Search";
 
 import House from "../../public/icons/house-24.svg";
 import Envelope from "../../public/icons/envelope-closed-24.svg";
 import logo from "../../public/logo2.png";
-import Phone from "../../public/icons/phone-42-32.svg"
+import Phone from "../../public/icons/phone-42-32.svg";
 
 import "./nav.css";
 
-export const Nav = () => {
+export const Nav = ({ handleSearch }) => {
+  console.log({ handleSearch });
   return (
     <div id="navContainer" className="nav-container">
       <div id="logoContainer" className="logo-container">
-      <Link to="/about">
-        <img id="logoImage"  width="32" height="32" className=" logo-image" alt="logo" src={logo} /></Link>
+        <Link to="/about">
+          <img
+            id="logoImage"
+            width="32"
+            height="32"
+            className=" logo-image"
+            alt="logo"
+            src={logo}
+          />
+        </Link>
       </div>
-      <Search />
+      <Search search="" handleSearch={handleSearch} />
       <div className="icons-container">
-      <a href="tel:+381234567890">
+        <a href="tel:+381234567890">
           <img
             src={Phone}
             alt="Phone Icon"
@@ -44,8 +54,10 @@ export const Nav = () => {
             className="icon bar-icon"
           />
         </a>
-        </div>
+      </div>
     </div>
   );
 };
-
+Nav.propTypes = {
+  handleSearch: PropTypes.string,
+};

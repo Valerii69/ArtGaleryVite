@@ -25,7 +25,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "19.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acryl","dy", "gold", "sunrise", "Abstract", "flower"],
   },
   {
     artist: "Francois Dupont",
@@ -36,7 +36,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "19.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic","dyr", "gold", "sunrise", "Abstract", "flower"],
   },
   {
     artist: "Marcel Rousseau",
@@ -58,7 +58,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "13.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
   {
     artist: "Francois Dupont",
@@ -69,7 +69,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "14.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gol", "sunrise", "abstrac", "flower"],
   },
   {
     artist: "Marcel Rousseau",
@@ -91,7 +91,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "16.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic","gold", "sunrise", "Abstract", "flower","henri"],
   },
 
   {
@@ -236,7 +236,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "13.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
   {
     artist: "Francois Dupont",
@@ -269,7 +269,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "16.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
 
   {
@@ -414,7 +414,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "13.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
   {
     artist: "Francois Dupont",
@@ -447,7 +447,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "16.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
 
   {
@@ -592,7 +592,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "13.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
   {
     artist: "Francois Dupont",
@@ -625,7 +625,7 @@ export const artGalleryData = [
     width: "100%",
     height: "100%",
     date: "16.12.24",
-    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower"],
+    tags: ["acrylic", "gold", "sunrise", "Abstract", "flower","henri"],
   },
 
   {

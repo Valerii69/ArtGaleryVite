@@ -1,49 +1,30 @@
-// import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import "./search.css";
 import SearchIcon from "../../public/icons/search_12_32.svg";
 
-export const Search = () => {
-  // const [search, setSearch] = useState(props.search);
+export const Search = ({ search: initialSearch = "", handleSearch }) => {
+  const [search, setSearch] = useState(
+    initialSearch.charAt(0).toUpperCase() + initialSearch.slice(1)
+  );
 
-  // useEffect(
-  //   () => {
-  //     setSearch(props.search.charAt(0).toUpperCase() + props.search.slice(1));
-  //   },
-  //   [props.search] // Occurs when the state within is changing
-  // );
+  useEffect(() => {
+    setSearch(initialSearch.charAt(0).toUpperCase() + initialSearch.slice(1));
+  }, [initialSearch]);
 
-  /**
-   * When occrs event 'onChange' in the search input,
-   * update the parent props {handleSearch} with the search text.
-   * @param {onChange} event
-   */
-  // function updateSearch(event) {
-  //   // Get the search text when occurs event 'onChange'
-  //   let searchText = event.target.value.substr(0, 30).toLowerCase();
-  //   setSearch(searchText);
+  const updateSearch = (event) => {
+    const searchText = event.target.value.substr(0, 30).toLowerCase();
+    setSearch(searchText);
+    handleSearch(searchText);
+  };
 
-  //   // Update the parent's props {handleSearch} with the search text
-  //   props.handleSearch(searchText);
-  // }
-
-  // function deleteSearch() {
-  //   // Get the search text when occurs event 'delete search'
-  //   let searchText = "";
-  //   setSearch(searchText);
-
-  //   // Update the parent's props {handleSearch} with the search text
-  //   props.handleSearch(searchText);
-  // }
-
-  // const updateSearchOnSubmit = (e) => {
-  //   e.preventDefault();
-  //   props.handleSearch(search);
-  // };
+  const deleteSearch = () => {
+    setSearch("");
+    handleSearch("");
+  };
 
   return (
     <div id="searchContainer" className="search-container">
-      {/* <i id="searchIcon" className="fa fa-search search-icon" /> */}
-
       <div id="searchIcon" className="fa fa-search search-icon">
         <img
           src={SearchIcon}
@@ -58,20 +39,24 @@ export const Search = () => {
         <input
           id="searchInput"
           className="search-input"
-          // onChange={updateSearch}
+          onChange={updateSearch}
           placeholder="Search"
-          // value={search}
+          value={search}
         />
       </form>
 
-      {/* <i
+      <i
         className={
           search
             ? "fas fa-times delete-icon show"
             : "fas fa-times delete-icon hide"
         }
         onClick={deleteSearch}
-      /> */}
+      />
     </div>
   );
+};
+Search.propTypes = {
+  search: PropTypes.string,
+  handleSearch: PropTypes.string,
 };

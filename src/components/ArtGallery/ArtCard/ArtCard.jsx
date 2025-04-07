@@ -8,7 +8,7 @@ export function ArtCard(props) {
   const [currentImage, setCurrentImage] = useState(null);
 
   const openModal = (imageSrc) => {
-    // console.log("🔍 openModal executed, imageSrc:", imageSrc);
+    console.log("🔍 openModal executed, imageSrc:", imageSrc);
     setCurrentImage(imageSrc);
     setIsModalOpen(true);
   };
@@ -42,6 +42,7 @@ export function ArtCard(props) {
       <Modal
         title={props.title}
         artist={props.artist}
+        tags={props.tags}
         date={props.date}
         price={props.price}
         isOpen={isModalOpen}
@@ -64,6 +65,7 @@ export function ArtCard(props) {
 ArtCard.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  tags:PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
   medium: PropTypes.string.isRequired,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,

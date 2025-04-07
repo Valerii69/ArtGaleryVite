@@ -11,6 +11,7 @@ export function Modal({
   artist,
   date,
   price,
+  tags,
 }) {
 
 
@@ -46,7 +47,7 @@ export function Modal({
             <p id="date" className="date">
               – $ {price}
             </p>
-            <ul>tagsList</ul>
+            <ul className="date-tags">Tags: {tags}</ul>
             <div className="likes-container">
               {/* <Like card={card} />
             <Dislike card={card} /> */}
@@ -66,4 +67,5 @@ Modal.propTypes = {
   artist: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
 };

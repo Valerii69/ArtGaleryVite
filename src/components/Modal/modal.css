@@ -78,16 +78,23 @@ img {
 .title,
 .artist {
     color: #c74778;
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
+        /* font-style: italic; */
     font-size: 1.25em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .date {
-    font-style: italic;
+    /* font-style: italic; */
     text-align: right;
     margin-right: 2vw;
+    font-size: 85%;
+    color: #c74778;
+}
+.date-tags{
+    color: #c74778;
     font-size: 65%;
+    /* font-style: italic; */
 }
 .icon {
     color: #c74778;
@@ -117,7 +124,7 @@ img {
     }
 
     .image-container {
-        padding: 2vw 1vw 1vw 1vw;
+        padding: 1vw 1vw 1vw 1vw;
     }
 }
 

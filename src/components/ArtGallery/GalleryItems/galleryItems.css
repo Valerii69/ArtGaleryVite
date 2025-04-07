@@ -16,12 +16,21 @@ ul {
 }
 
 .gallery-item img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 15px;
 }
-
+.searchError {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% - 10px);
+  color: #c74778;
+  font-size: 3em;
+}
 @media only screen and (max-width: 1023px) {
   .gallery {
     column-count: 3; /* 3 колонки для середніх екранів */
