@@ -18,9 +18,9 @@ export function GalleryItems({ items = [] }) {
   const currentItems = items.slice(offset, offset + ITEMS_PER_PAGE);
   const pageCount = Math.ceil(items.length / ITEMS_PER_PAGE);
 
-  const handleCardSelect = (selectedCard) => {
-    console.log("Selected card:", selectedCard);
-  };
+  // const handleCardSelect = (selectedCard) => {
+  //   console.log("Selected card:", selectedCard);
+  // };
 
   return (
     <>
@@ -35,7 +35,7 @@ export function GalleryItems({ items = [] }) {
                   size={item.size}
                   price={item.price}
                   src={item.src}
-                  onCardClick={handleCardSelect}
+                  // onCardClick={handleCardSelect}
                   width={item.width}
                   height={item.height}
                   date={item.date}

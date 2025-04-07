@@ -8,7 +8,7 @@ import { FlowerSVG } from "./FlowerSVG";
 
 export const Flower = (props) => {
   function animation() {
-    console.log("run animation");
+    // console.log("run animation");
     anime({
       targets: ".flower-cont svg path",
       strokeDashoffset: [anime.setDashoffset, 0],

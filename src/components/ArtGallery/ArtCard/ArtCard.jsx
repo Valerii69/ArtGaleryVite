@@ -8,7 +8,7 @@ export function ArtCard(props) {
   const [currentImage, setCurrentImage] = useState(null);
 
   const openModal = (imageSrc) => {
-    console.log("🔍 openModal executed, imageSrc:", imageSrc);
+    // console.log("🔍 openModal executed, imageSrc:", imageSrc);
     setCurrentImage(imageSrc);
     setIsModalOpen(true);
   };

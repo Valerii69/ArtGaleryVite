@@ -9,7 +9,7 @@ import "./contactButton.css";
 
 export function ContactButton() {
   const [active, setActive] = useState(false);
-  console.log(active);
+  // console.log(active);
 
   return (
     <div className={`buttonSticky ${active ? "active" : ""}`}>

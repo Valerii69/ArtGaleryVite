@@ -10,7 +10,7 @@ import Phone from "../../public/icons/phone-42-32.svg";
 import "./nav.css";
 
 export const Nav = ({ handleSearch }) => {
-  console.log({ handleSearch });
+  // console.log({ handleSearch });
   return (
     <div id="navContainer" className="nav-container">
       <div id="logoContainer" className="logo-container">

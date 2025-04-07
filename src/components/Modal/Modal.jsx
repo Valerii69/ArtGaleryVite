@@ -41,12 +41,13 @@ export function Modal({
             <p id="artist" className="artist">
               {artist}
             </p>
-            <p id="date" className="date">
-              – {date}
+            <div className="date">
+            <p id="date" className="">
+              created: {date}
             </p>
-            <p id="date" className="date">
-              – $ {price}
-            </p>
+            <p id="date" className="">
+              cost: $ {price}
+            </p></div>
             <ul className="date-tags">Tags: {tags}</ul>
             <div className="likes-container">
               {/* <Like card={card} />
