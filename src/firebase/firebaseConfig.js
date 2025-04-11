@@ -1,12 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+const apiKeyFirebase = import.meta.env.VITE_FIREBASE_API_KEY;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDNt0puxzEuYtFUvAyyfdkXdnF4__4t1c8",
+//   apiKey: "AIzaSyDNt0puxzEuYtFUvAyyfdkXdnF4__4t1c8",
+  apiKey: apiKeyFirebase,
   authDomain: "artgallery-3621a.firebaseapp.com",
   projectId: "artgallery-3621a",
   storageBucket: "artgallery-3621a.firebasestorage.app",

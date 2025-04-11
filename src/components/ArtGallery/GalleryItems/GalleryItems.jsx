@@ -16,6 +16,7 @@ export function GalleryItems({ items = [] }) {
 
   const offset = currentPage * ITEMS_PER_PAGE;
   const currentItems = items.slice(offset, offset + ITEMS_PER_PAGE);
+  console.log(currentItems);
   const pageCount = Math.ceil(items.length / ITEMS_PER_PAGE);
 
   // const handleCardSelect = (selectedCard) => {
