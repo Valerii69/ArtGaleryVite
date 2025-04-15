@@ -1,5 +1,6 @@
 import { auth } from "../../../firebase/firebaseConfig";
 import { signOut } from "firebase/auth";
+import { ArtManager } from "../ArtManager/ArtManager";
 import './dashboard.css'
 
 export function Dashboard({ setIsAuthenticated }) {
@@ -15,7 +16,7 @@ export function Dashboard({ setIsAuthenticated }) {
 
   return (
     <div>
-      <h2>Dashboard</h2>
+       <ArtManager />
       <button className="logoutBtn" onClick={handleLogout}>Logout</button>
     </div>
   );

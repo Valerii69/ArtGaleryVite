@@ -13,11 +13,11 @@ export function LoginForm() {
 
   return (
     <div className="login-form-wrapper">
-      <div className="login-form-container">
+      <div >
         {isAuthenticated ? (
           <Dashboard  setIsAuthenticated={setIsAuthenticated} />
         ) : (
-          <Login setIsAuthenticated={setIsAuthenticated} />
+          <Login className="login-form-container" setIsAuthenticated={setIsAuthenticated} />
         )}
       </div>
     </div>
