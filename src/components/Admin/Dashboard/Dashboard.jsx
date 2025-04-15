@@ -16,7 +16,7 @@ export function Dashboard({ setIsAuthenticated }) {
 
   return (
     <div>
-       <ArtManager />
+       {/* <ArtManager /> */}
       <button className="logoutBtn" onClick={handleLogout}>Logout</button>
     </div>
   );

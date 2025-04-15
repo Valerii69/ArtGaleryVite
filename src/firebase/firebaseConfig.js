@@ -11,7 +11,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 const apiKeyFirebase = import.meta.env.VITE_FIREBASE_API_KEY;
 
 const firebaseConfig = {
-//   apiKey: "AIzaSyDNt0puxzEuYtFUvAyyfdkXdnF4__4t1c8",
+
   apiKey: apiKeyFirebase,
   authDomain: "artgallery-3621a.firebaseapp.com",
   projectId: "artgallery-3621a",
