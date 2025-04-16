@@ -4,6 +4,15 @@ import svgr from "vite-plugin-svgr"
 
 // https://vite.dev/config/
 export default defineConfig({
+
+  build: {
+    outDir: 'dist'
+  },
   base:"/ArtGaleryVite/",
-  plugins: [react(), svgr()]
+  plugins: [react(), svgr()],
+  server: {
+    fs: {
+      strict: false
+    }
+  }
 })
