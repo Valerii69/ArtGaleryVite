@@ -13,7 +13,6 @@ import { db } from "../../../firebase/firebaseConfig";
 import "./ArtManager.css";
 
 const CLOUDINARY_UPLOAD_PRESET = "artwork_upload";
-// const CLOUDINARY_UPLOAD_PRESET = "TestTest";
 const CLOUDINARY_CLOUD_NAME = "dinetjtpb";
 
 export function ArtManager() {
@@ -140,7 +139,7 @@ export function ArtManager() {
         {form.src && (
           <img src={form.src} alt="preview" className="img-preview" />
         )}
-          <input type="file" onChange={handleImageUpload} />
+        <input type="file" onChange={handleImageUpload} />
 
         {inputFields.map((field) => (
           <input

@@ -42,7 +42,7 @@ export default function ArtGallery() {
       tag.toLowerCase().includes(searchTerm.toLowerCase())
     )
   );
-
+  console.log(+"1.5");
   return (
     <>
       <div id="ArtGallery" className="wide-art-gallery">
