@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { inputFields } from "../../../data/inputFields.js";
 import {
   collection,
   getDocs,
@@ -7,11 +8,13 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
+
 import { db } from "../../../firebase/firebaseConfig";
 import "./ArtManager.css";
 
 const CLOUDINARY_UPLOAD_PRESET = "artwork_upload";
-const CLOUDINARY_CLOUD_NAME = "getAllGallery";
+// const CLOUDINARY_UPLOAD_PRESET = "TestTest";
+const CLOUDINARY_CLOUD_NAME = "dinetjtpb";
 
 export function ArtManager() {
   const [form, setForm] = useState({
@@ -43,7 +46,7 @@ export function ArtManager() {
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
 
-    // Показуємо тимчасове прев'ю
+    // тимчасове прев'ю
     const tempUrl = URL.createObjectURL(file);
     setForm((prev) => ({ ...prev, src: tempUrl }));
 
@@ -130,56 +133,25 @@ export function ArtManager() {
 
   return (
     <div className="art-manager">
-      <h2>Artwork Manager</h2>
+      <h1>Artwork Manager</h1>
 
       <div className="art-form">
-        <input type="file" onChange={handleImageUpload} />
+        {/* <input type="file" onChange={handleImageUpload} /> */}
         {form.src && (
           <img src={form.src} alt="preview" className="img-preview" />
         )}
+          <input type="file" onChange={handleImageUpload} />
 
-        <input
-          name="artist"
-          placeholder="Artist"
-          value={form.artist}
-          onChange={handleChange}
-        />
-        <input
-          name="title"
-          placeholder="Title"
-          value={form.title}
-          onChange={handleChange}
-        />
-        <input
-          name="date"
-          placeholder="Date"
-          value={form.date}
-          onChange={handleChange}
-        />
-        <input
-          name="height"
-          placeholder="Height"
-          value={form.height}
-          onChange={handleChange}
-        />
-        <input
-          name="width"
-          placeholder="Width"
-          value={form.width}
-          onChange={handleChange}
-        />
-        <input
-          name="price"
-          placeholder="Price"
-          value={form.price}
-          onChange={handleChange}
-        />
-        <input
-          name="size"
-          placeholder="Size"
-          value={form.size}
-          onChange={handleChange}
-        />
+        {inputFields.map((field) => (
+          <input
+            key={field.name}
+            name={field.name}
+            type={field.type}
+            placeholder={field.placeholder}
+            value={form[field.name]}
+            onChange={handleChange}
+          />
+        ))}
 
         <div className="tag-list">
           {form.tags.map((tag) => (
@@ -193,7 +165,7 @@ export function ArtManager() {
           ))}
         </div>
 
-        <div style={{ display: "flex", gap: "0.5rem" }}>
+        <div className="tag-item-input">
           <input
             placeholder="Add tag"
             value={newTag}
