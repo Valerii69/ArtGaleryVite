@@ -18,7 +18,7 @@ export function Login({ setIsAuthenticated }) {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
-// показ паспорта
+// показ пароля
   const toggleShowPassword = () => setShowPassword((prev) => !prev);
 
   const showAlert = ({ icon = "info", title, text, timer = 2000 }) =>

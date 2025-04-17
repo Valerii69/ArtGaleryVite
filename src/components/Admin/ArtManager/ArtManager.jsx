@@ -126,7 +126,7 @@ export function ArtManager() {
   };
 
   const handleDelete = async (id) => {
-    await deleteDoc(doc(db, "artworks", id));
+    await deleteDoc(doc(db, "artGalleryDataFireBase", id));
     fetchArtworks();
   };
 
@@ -135,11 +135,19 @@ export function ArtManager() {
       <h1>Artwork Manager</h1>
 
       <div className="art-form">
-        {/* <input type="file" onChange={handleImageUpload} /> */}
+        <label for="picture" className="picture">
+          Choose a picture:
+        </label>
         {form.src && (
           <img src={form.src} alt="preview" className="img-preview" />
         )}
-        <input type="file" onChange={handleImageUpload} />
+
+        <input
+          type="file"
+          name="picture"
+          accept="image/png, image/jpeg"
+          onChange={handleImageUpload}
+        />
 
         {inputFields.map((field) => (
           <input
@@ -170,23 +178,37 @@ export function ArtManager() {
             value={newTag}
             onChange={(e) => setNewTag(e.target.value)}
           />
+
           <button type="button" onClick={handleAddTag}>
             Add Tag
           </button>
         </div>
 
-        <button onClick={handleSubmit} className="">
-          {editId ? "Update Artwork" : "Add Artwork"}
-        </button>
+        <hr />
 
+        <div className="buttonAdd">
+          <button onClick={handleSubmit}>
+            {editId ? "Update Artwork" : "Add Artwork"}
+          </button>
+        </div>
         <div className="art-preview">
           {artworks.map((art) => (
             <div key={art.id} className="art-card">
               <img src={art.src} alt={art.title} />
               <div className="title">
-                title:{art.title} by {art.artist}
+                title: {art.title} by {art.artist}
               </div>
-              <div>Tags: {art.tags?.join(", ")}</div>
+              <div className="details">
+                <div>
+                  <span>Price:</span> {art.price} €{" "}
+                </div>
+                <div>
+                  <span>Size:</span> {art.size}{" "}
+                </div>
+                <div>
+                  <span>Tags:</span> {art.tags?.join(", ")}
+                </div>
+              </div>
               <div className="buttons">
                 <button onClick={() => handleEdit(art)} className="edit">
                   Edit
