@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { inputFields } from "../../../data/inputFields.js";
 import {
   collection,
   getDocs,
@@ -10,26 +9,38 @@ import {
 } from "firebase/firestore";
 
 import { db } from "../../../firebase/firebaseConfig";
+import { inputFields } from "../../../data/inputFields.js";
+import NoImages_re from "../../../public/Images/NoImagesR.jpg";
 import "./ArtManager.css";
 
 const CLOUDINARY_UPLOAD_PRESET = "artwork_upload";
 const CLOUDINARY_CLOUD_NAME = "dinetjtpb";
+
 
 export function ArtManager() {
   const [form, setForm] = useState({
     artist: "",
     title: "",
     date: "",
-    height: "",
-    width: "",
+    height: "100%",
+    width: "100%",
     size: "",
     price: "",
-    src: "",
+    src: NoImages_re,
     tags: [],
   });
   const [newTag, setNewTag] = useState("");
   const [editId, setEditId] = useState(null);
   const [artworks, setArtworks] = useState([]);
+  const [filters, setFilters] = useState({
+    Artist: "",
+    Title: "",
+    Date: "",
+    Height: "",
+    Width: "",
+    Size: "",
+    Price: "",
+  });
 
   const artworksRef = collection(db, "artGalleryDataFireBase");
 
@@ -45,7 +56,6 @@ export function ArtManager() {
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
 
-    // тимчасове прев'ю
     const tempUrl = URL.createObjectURL(file);
     setForm((prev) => ({ ...prev, src: tempUrl }));
 
@@ -113,7 +123,7 @@ export function ArtManager() {
       width: "",
       size: "",
       price: "",
-      src: "",
+      src: NoImages_re,
       tags: [],
     });
     setEditId(null);
@@ -130,14 +140,43 @@ export function ArtManager() {
     fetchArtworks();
   };
 
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const filteredArtworks = artworks.filter((art) => {
+    return Object.keys(filters).every((key) => {
+      const filterVal = filters[key];
+      if (!filterVal) return true;
+      return String(art[key] ?? "")
+        .toLowerCase()
+        .includes(filterVal.toLowerCase());
+    });
+  });
+
   return (
     <div className="art-manager">
-      <h1>Artwork Manager</h1>
+        {/* Фільтр */}
+      <div className="filter-bar">
+        <h3>Filter Artworks</h3>
+        {Object.keys(filters).map((key) => (
+          <input
+            key={key}
+            name={key}
+            placeholder={`${key}`}
+            value={filters[key]}
+            onChange={handleFilterChange}
+            className={filters[key] ? "filter-input active" : "filter-input"}
+          />
+        ))}
+      </div>
 
       <div className="art-form">
-        <label for="picture" className="picture">
+        <label htmlFor="picture" className="picture">
           Choose a picture:
         </label>
+
         {form.src && (
           <img src={form.src} alt="preview" className="img-preview" />
         )}
@@ -178,7 +217,6 @@ export function ArtManager() {
             value={newTag}
             onChange={(e) => setNewTag(e.target.value)}
           />
-
           <button type="button" onClick={handleAddTag}>
             Add Tag
           </button>
@@ -191,8 +229,9 @@ export function ArtManager() {
             {editId ? "Update Artwork" : "Add Artwork"}
           </button>
         </div>
+
         <div className="art-preview">
-          {artworks.map((art) => (
+          {filteredArtworks.map((art) => (
             <div key={art.id} className="art-card">
               <img src={art.src} alt={art.title} />
               <div className="title">
@@ -200,10 +239,10 @@ export function ArtManager() {
               </div>
               <div className="details">
                 <div>
-                  <span>Price:</span> {art.price} €{" "}
+                  <span>Price:</span> {art.price} €
                 </div>
                 <div>
-                  <span>Size:</span> {art.size}{" "}
+                  <span>Size:</span> {art.size}
                 </div>
                 <div>
                   <span>Tags:</span> {art.tags?.join(", ")}
