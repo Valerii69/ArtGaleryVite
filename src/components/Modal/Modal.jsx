@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Mark from "../../public/icons/x-mark-3-32.svg";
+import Payment from "../../public/icons/payment.svg";
 import "./modal.css";
 
 export function Modal({
@@ -41,17 +42,24 @@ export function Modal({
               {artist}
             </p>
             <div className="date">
-            <p id="date" className="">
-              created: {date}
-            </p>
-            <p id="date" className="">
-              cost: $ {price}
-            </p></div>
-            <ul className="date-tags">Tags: {tags}</ul>
-            <div className="likes-container">
-              {/* <Like card={card} />
-            <Dislike card={card} /> */}
+              <p id="date" className="">
+                Created: {date}
+              </p>
+              <p id="date" className="">
+                Cost: $ {price}
+              </p>
             </div>
+            <ul className="date-tags">Tags: {tags}</ul>
+  
+              <img
+                src={Payment}
+                alt="Payment"
+              width="50%"
+              height="auto"
+                className="payment"
+              />
+      
+   
           </div>
         </div>
       </div>

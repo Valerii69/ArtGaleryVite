@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
-  // base:"/ArtGaleryVite/",
-    base:"/",
+  base:"/ArtGaleryVite/",
+    // base:"/",
   plugins: [react(), svgr()],
   server: {
     fs: {
