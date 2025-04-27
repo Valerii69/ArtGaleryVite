@@ -25,8 +25,8 @@ export function Modal({
             <img
               src={Mark}
               alt="Mark Icon"
-              width="24"
-              height="24"
+              width="26"
+              height="26"
               className="bar-icon"
             />
           </button>
@@ -50,15 +50,15 @@ export function Modal({
               </p>
             </div>
             <ul className="date-tags">Tags: {tags}</ul>
-  
+  <div className="payment">
               <img
                 src={Payment}
                 alt="Payment"
-              width="50%"
+              width="60%"
               height="auto"
-                className="payment"
+                // className=""
               />
-      
+      </div>
    
           </div>
         </div>
