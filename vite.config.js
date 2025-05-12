@@ -8,7 +8,10 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
-  base:"/ArtGaleryVite/",
+  esbuild: {
+  jsx: 'automatic',
+},
+  base:"/",
     // base:"/",
   plugins: [react(), svgr()],
   server: {
